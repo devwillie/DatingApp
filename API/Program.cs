@@ -9,18 +9,39 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using API.Interfaces;
+using API.Services;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using API.Extensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// services container
-builder.Services.AddApplicationServices(builder.Configuration);
+// Add services to the container
 builder.Services.AddControllers();
-builder.Services.AddCors();
+builder.Services.AddApplicationServices(builder.Configuration);
+builder.Services.AddIdentityServices(builder.Configuration);
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline
+app.UseCors(builder => builder.AllowAnyHeader().AllowAnyMethod().WithOrigins("https://localhost:4200"));
+app.UseAuthentication();
+app.UseAuthorization();
+app.MapControllers();
+app.Run();
+
+// services container
+// WSL NOTE: These lines will be un-commented as I progress through the course but for now, I'm going to use what's
+// shown in lesson 4.41
+//builder.Services.AddApplicationServices(builder.Configuration);
 //builder.Services.AddIdentityServices(builder.Configuration);
+/*
 builder.Services.AddSignalR();
 
 // middleware
-var app = builder.Build();
+//var app = builder.Build();
 //app.UseMiddleware<ExceptionMiddleware>();
 app.UseHttpsRedirection();
 app.UseRouting();
@@ -52,3 +73,4 @@ catch (Exception ex)
     logger.LogError(ex, "An error occurred during migration");
 }
 app.Run();
+*/

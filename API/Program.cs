@@ -6,6 +6,7 @@ using API.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Session;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 

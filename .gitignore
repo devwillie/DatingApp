@@ -458,3 +458,6 @@ $RECYCLE.BIN/
 !.vscode/extensions.json
 
 appsettings.json
+
+client/ssl/
+client/node_modules/

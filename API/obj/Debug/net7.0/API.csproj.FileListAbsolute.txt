@@ -1,5 +1,4 @@
 /home/devwill/Projects/dotNet/UdemyCourses/CreateAngularDotNetSPA/DatingApp/API/bin/Debug/net7.0/appsettings.Development.json
-/home/devwill/Projects/dotNet/UdemyCourses/CreateAngularDotNetSPA/DatingApp/API/bin/Debug/net7.0/appsettings.json
 /home/devwill/Projects/dotNet/UdemyCourses/CreateAngularDotNetSPA/DatingApp/API/bin/Debug/net7.0/API.deps.json
 /home/devwill/Projects/dotNet/UdemyCourses/CreateAngularDotNetSPA/DatingApp/API/bin/Debug/net7.0/API.runtimeconfig.json
 /home/devwill/Projects/dotNet/UdemyCourses/CreateAngularDotNetSPA/DatingApp/API/bin/Debug/net7.0/API.dll

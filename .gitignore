@@ -461,3 +461,4 @@ appsettings.json
 
 client/ssl/
 client/node_modules/
+API/obj/
